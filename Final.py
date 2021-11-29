@@ -98,8 +98,10 @@ while True:
             ##matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
             name = "Unknown"
             face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
-            best_match_index = np.argmin(face_distances)
+            best_match_index = np.argmin(face_distances) 
+            ##find min number of all list of face_distance and gives us the indices of that
             facePercent = 1-face_distances[best_match_index]
+            ##face_distances[best_match_index] คือหาตำแหน่งที่ best_match_index ใน face_distance
             if facePercent>= 0.5   :
                 name = known_face_names[best_match_index]
 
