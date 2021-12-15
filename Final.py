@@ -46,6 +46,7 @@ def markAttendance(Name, iNumber, Grade, Class, Number):
             tString = now.strftime('%H:%M')
             f.writelines(f'\n{Name},{iNumber},{Grade},{Class},{Number},{dString},{tString}')
             tv.insert('', 'end', values=(Name, iNumber, Grade, Class, Number, dString, tString))
+            #MarkAttendance in .csv and tkinter
         
 app = Tk()
 app.title('Test')
